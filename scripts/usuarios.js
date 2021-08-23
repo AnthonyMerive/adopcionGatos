@@ -32,3 +32,35 @@ btnCorreo.addEventListener('click', async() =>{
     document.getElementById('email').value = correo;
     document.getElementById('id').value = id;
 })
+
+btnEditar.addEventListener('click', async() => {
+    let idModificar = document.getElementById('id').value;
+    let nameMod = document.getElementById('name').value;
+    let lastNameMod = document.getElementById('lastName').value;
+    let emailMod = document.getElementById('email').value;
+  
+    let resp = await fetch(`http://localhost:4002/usuarios/${idModificar}`, {
+        method: 'PUT',
+        body: JSON.stringify({
+            id: idModificar,
+            nombre: nameMod,
+            apellido: lastNameMod,
+            correo: emailMod
+        }),
+        headers: {
+            "Content-Type": "application/json; charset=UTF-8"
+        }
+    }) 
+/*     let data = resp.json();
+    console.log(data); */
+})
+
+btnEliminar.addEventListener('click', async() => {
+
+    let idModificar = document.getElementById('id').value;
+    let resp = await fetch(`http://localhost:4002/usuarios/${idModificar}`,{
+        method: 'DELETE',
+    })
+/*     let data = resp.json();
+    console.log(data); */
+})
