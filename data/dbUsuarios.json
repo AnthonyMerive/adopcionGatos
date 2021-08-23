@@ -1,0 +1,22 @@
+{
+  "usuarios": [
+    {
+      "id": 1,
+      "nombre": "Anthony",
+      "apellido": "Colmenares",
+      "correo": "anthony@gmail.com"
+    },
+    {
+      "nombre": "example",
+      "apellido": "example",
+      "correo": "example@example.com",
+      "id": 3
+    },
+    {
+      "nombre": "ejemplo",
+      "apellido": "ejemplo",
+      "correo": "ejemplo@ejemplo.com",
+      "id": 4
+    }
+  ]
+}
